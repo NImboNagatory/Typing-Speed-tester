@@ -1,4 +1,4 @@
-from data.dict import rand_list
+from data import rand_list
 import random
 from tkinter import Frame, Canvas, RAISED, Text, Label, ttk, END, StringVar, Tk
 from PIL import Image, ImageTk
@@ -132,6 +132,6 @@ def bind_any_kay(gui, func):
 
 
 def ico(gui):
-    icon = Image.open('data/w.jpg')
+    icon = Image.open('w.jpg')
     photo = ImageTk.PhotoImage(icon)
     return gui.wm_iconphoto(False, photo)
