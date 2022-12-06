@@ -68,9 +68,10 @@ class Word_Hangar(Frame):
         if time_seconds <= 9:
             if time_seconds == 0:
                 time_seconds = "Start"
+                self.Timer.config(fg="black")
             else:
                 time_seconds = f"0{time_seconds}"
-
+                self.Timer.config(fg="red")
         self.Timer["text"] = f"{time_seconds}"
         if time > 0:
             self.timer = self.after(1000, self.timer_tick, time - 1)
